@@ -8,12 +8,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="./css">
     <title>BarberShop</title>
 </head>
 <body>
     <header>
-        <a href="./index.html">Logo</a>
+        <a href="./index.html">
+            <svg width="66" height="55">
+                <use href="./images/icons.svg#icon-logo"></use>
+            </svg>
+        </a>
         <nav>
             <ul>
                 <li><a href="#about">О нас</a></li>
@@ -41,7 +45,24 @@
             <p>О НАС</p>
             <h2 id="about">Лучший Барбершоп твоего города</h2>
             <p>Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.</p>
-            Мы команда, которая никогда не останавливается на достигнутом жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда готовы усовершенствовать каждого, кто к нам приходит!
+            <p>Мы команда, которая никогда не останавливается на достигнутом жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда готовы усовершенствовать каждого, кто к нам приходит!</p>
+            <ul>
+                <li>
+                    <picture>
+                        <source srcset="./images/about-1-330.jpg 1x, ./images/about-1-330@2x.jpg 2x" media="(min-width: 768px)"/>
+                        <source srcset="./images/about-1-270.jpg 1x, ./images/about-1-270@2x.jpg 2x" media="(min-width: 1200px)"/>
+                        <img src="./images/about-1-270.jpg" alt="Beard"/>
+                      </picture>
+                </li>
+                <li>
+                    <picture>
+                        <source srcset="./images/about-2-330.jpg 1x, ./images/about-2-330@2x.jpg 2x" media="(min-width: 768px)"/>
+                        <source srcset="./images/about-2-270.jpg 1x, ./images/about-2-270@2x.jpg 2x" media="(min-width: 1200px)"/>
+                        <img src="./images/about-2-270.jpg" alt="Beard"/>
+                      </picture>
+                </li>
+            </ul>
+
             <button type="button">онлайн-запись</button>
         </section>
         <section>
@@ -113,6 +134,12 @@
             <h2 id="masters">Наши мастера</h2>
             <ul>
                 <li>
+                    <picture>
+                        <source srcset="./images/masters/john-smith-418.jpg 1x, ./images/masters/john-smith-418@2x.jpg 2x" media="(max-width: 767px)"/>
+                        <source srcset="./images/masters/john-smith-450.jpg 1x, ./images/masters/john-smith-450@2x.jpg 2x" media="(min-width: 768px)"/>
+                        <source srcset="./images/masters/john-smith-370.jpg 1x, ./images/masters/john-smith-370@2x.jpg 2x" media="(min-width: 1200px)"/>
+                        <img src="./images/masters/john-smith-370.jpg" alt="John-Smith"/>
+                      </picture>
                     <h3>John Smith</h3>
                     <p>Extreme Barber</p>
                     <ul>
@@ -123,6 +150,12 @@
                     </ul>
                 </li>
                 <li>
+                    <picture>
+                        <source srcset="./images/masters/michele-doe-418.jpg 1x, ./images/masters/michele-doe-418@2x.jpg 2x" media="(max-width: 767px)"/>
+                        <source srcset="./images/masters/michele-doe-450.jpg 1x, ./images/masters/michele-doe-450@2x.jpg 2x" media="(min-width: 768px)"/>
+                        <source srcset="./images/masters/michele-doe-370.jpg 1x, ./images/masters/michele-doe-370@2x.jpg 2x" media="(min-width: 1200px)"/>
+                        <img src="./images/masters/michele-doe-370.jpg" alt="Michele-Doe"/>
+                      </picture>
                     <h3>Michele Doe</h3>
                     <p>Extreme Barber</p>
                     <ul>
@@ -133,6 +166,12 @@
                     </ul>
                 </li>
                 <li>
+                    <picture>
+                        <source srcset="./images/masters/alan-black-418.jpg 1x, ./images/masters/alan-black-418@2x.jpg 2x" media="(max-width: 767px)"/>
+                        <source srcset="./images/masters/alan-black-450.jpg 1x, ./images/masters/alan-black-450@2x.jpg 2x" media="(min-width: 768px)"/>
+                        <source srcset="./images/masters/alan-black-370.jpg 1x, ./images/masters/alan-black-370@2x.jpg 2x" media="(min-width: 1200px)"/>
+                        <img src="./images/masters/alan-black-370.jpg" alt="ALan-Black"/>
+                      </picture>
                     <h3>Alan Black</h3>
                     <p>Extreme Barber</p>
                     <ul>
@@ -148,10 +187,38 @@
             <h2>Галерея</h2>
             <p>На латинском языке “барба” означает “борода”</p>
             <ul>
-                <li><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""></li>
-                <li><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""></li>
-                <li><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""></li>
-                <li><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""></li>
+                <li>
+                    <picture>
+                        <source srcset="./images/gallery/gallery-1-418.jpg 1x, ./images/gallery/gallery-1-418@2x.jpg 2x" media="(max-width: 767px)"/>
+                        <source srcset="./images/gallery/gallery-1-330.jpg 1x, ./images/gallery/gallery-1-330@2x.jpg 2x" media="(min-width: 768px)"/>
+                        <source srcset="./images/gallery/gallery-1-270.jpg 1x, ./images/gallery/gallery-1-270@2x.jpg 2x" media="(min-width: 1200px)"/>
+                        <img src="./images/gallery/gallery-1-270.jpg" alt="Haircutting"/>
+                      </picture>
+                </li>
+                <li>
+                    <picture>
+                        <source srcset="./images/gallery/gallery-2-418.jpg 1x, ./images/gallery/gallery-2-418@2x.jpg 2x" media="(max-width: 767px)"/>
+                        <source srcset="./images/gallery/gallery-2-330.jpg 1x, ./images/gallery/gallery-2-330@2x.jpg 2x" media="(min-width: 768px)"/>
+                        <source srcset="./images/gallery/gallery-2-270.jpg 1x, ./images/gallery/gallery-2-270@2x.jpg 2x" media="(min-width: 1200px)"/>
+                        <img src="./images/gallery/gallery-2-270.jpg" alt="Haircutting"/>
+                      </picture>
+                </li>
+                <li>
+                    <picture>
+                        <source srcset="./images/gallery/gallery-3-418.jpg 1x, ./images/gallery/gallery-3-418@2x.jpg 2x" media="(max-width: 767px)"/>
+                        <source srcset="./images/gallery/gallery-3-330.jpg 1x, ./images/gallery/gallery-3-330@2x.jpg 2x" media="(min-width: 768px)"/>
+                        <source srcset="./images/gallery/gallery-3-270.jpg 1x, ./images/gallery/gallery-3-270@2x.jpg 2x" media="(min-width: 1200px)"/>
+                        <img src="./images/gallery/gallery-3-270.jpg" alt="Haircutting"/>
+                      </picture>
+                </li>
+                <li>
+                    <picture>
+                        <source srcset="./images/gallery/gallery-4-418.jpg 1x, ./images/gallery/gallery-4-418@2x.jpg 2x" media="(max-width: 767px)"/>
+                        <source srcset="./images/gallery/gallery-4-330.jpg 1x, ./images/gallery/gallery-4-330@2x.jpg 2x" media="(min-width: 768px)"/>
+                        <source srcset="./images/gallery/gallery-4-270.jpg 1x, ./images/gallery/gallery-4-270@2x.jpg 2x" media="(min-width: 1200px)"/>
+                        <img src="./images/gallery/gallery-4-270.jpg" alt="Haircutting"/>
+                      </picture>
+                </li>
             </ul>
         </section>
         <section>
