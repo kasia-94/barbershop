@@ -1,0 +1,70 @@
+.online-record {
+    padding-top: 84px;
+    padding-bottom: 84px;
+    background-color: $contact-background;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.online-title {
+    margin-bottom: 44px;
+}
+
+.online-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    color: $shadow-text-color;
+    @include font (600, 11px, 1.36, 0.1em);
+    text-transform: uppercase;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    margin-bottom: 44px;
+
+    input {
+        height: 23px;
+    }
+    textarea {
+        height: 75px;
+    }
+}
+
+.form-input {
+    margin: 0;
+    padding: 3px;
+    resize: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $shadow-text-color; 
+    cursor: pointer;
+    color: $white-color;
+}
+
+.form-input:focus + label, .form-input:hover + label {
+    color: $white-color;
+    transform: translateY(-100%);
+}
+
+.form-input:focus, .form-input:hover {
+    border: none;
+    border-bottom: 1px solid $white-color;
+}
+
+.form-label {
+    position: absolute;
+    transition: transform 250ms ease-in-out;
+}

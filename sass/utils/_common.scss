@@ -1,0 +1,8 @@
+.main-title {
+    font-family: 'Raleway';
+    @include font (700, 42px, 1.17, 0.05em);
+  }
+
+  .white-title {
+    color: $white-color;
+  }

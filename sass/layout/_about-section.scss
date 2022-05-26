@@ -1,0 +1,39 @@
+.about__title-first {
+    display: flex;
+    @include font (600, 11px, 1.36, 0.1em);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+&::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+    margin-right: 20px;
+    align-self: center;
+    background-color: $main-text-color;
+}
+}
+
+.about__picture-list {
+    @media screen and (max-width:767px) {
+        display: none;
+    }
+}
+
+.about__main-title {
+    margin-bottom: 20px;
+    font-family: 'Raleway';
+    @include font (700, 28px, 1.18, 0.05em);
+}
+
+.about__main-text {
+    margin-bottom: 20px;
+    @include font (null, 16px, 1.62, 0.02em);
+    color: $article-text-color;
+}
+
+.about__text {
+    margin-bottom: 40px;
+    @include font (null, 16px, 1.86, 0.02em);
+    color: $article-text-color;
+}

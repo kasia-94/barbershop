@@ -1,0 +1,22 @@
+.button {
+    width: 160px;
+    height: 40px;
+    padding: 12px 0;
+    text-transform: uppercase;
+    @include font (600, 12px, 1.33, 0.09em);
+    background-color: transparent;
+    border: 1px solid $accent-color;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: color 250ms ease-in-out, 
+    background-color 250ms ease-in-out;
+
+    &:active, &:hover, &:focus {
+        background-color: $accent-color;
+        color: $white-color;
+    }
+}
+
+.white__button {
+    color: $white-color;
+}

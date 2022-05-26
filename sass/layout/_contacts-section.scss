@@ -1,0 +1,90 @@
+.contact {
+    padding-top: 84px;
+    padding-bottom: 84px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: $contact-background;
+
+    @media screen and (max-width: 767px) {
+        background-image: url(../images/footer-mobile.png);
+    }
+    @media (min-device-pixel-ratio: 2),(min-resolution: 192dpi),(min-resolution: 2dppx) {
+        background-image: url(../images/footer-mobile@2x.png);
+    }
+
+    @media screen and (min-width: 768px) {
+        background-image: linear-gradient(to right, rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url('../images/footer-tablet.jpg');
+        }
+    @media (min-device-pixel-ratio: 2),(min-resolution: 192dpi),(min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url('../images/footer-tablet@2x.jpg');
+        }
+
+    @media screen and (min-width: 1200px) {
+            background-image: linear-gradient(to right, rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url('../images/footer-desktop.jpg');
+            }
+    @media (min-device-pixel-ratio: 2),(min-resolution: 192dpi),(min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url('../images/footer-desktop@2x.jpg');
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+}
+
+.contact-title {
+    display: flex;
+    justify-content: center;
+}
+.contact-list {
+    justify-content: flex-start;
+
+    li a {
+        color: $secondary-text-color;
+    }
+
+    li {
+        display: flex;
+    }
+}
+
+.address {
+    margin-top: 40px;
+    margin-bottom: 44px;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.contact-link {
+    font-style: normal;
+    margin-left: 16px;
+}
+
+.contact-item, .time-text {
+    @include font (null, 18px, 1.67, 0.02em);
+    color: $secondary-text-color;
+}
+.contact-item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.time-title {
+    display: flex;
+    margin-bottom: 20px;
+    @include font (600, 11px, 1.36, 0.1em);
+    color: $white-color;
+    text-transform: uppercase;
+
+    &::before {
+        content: '';
+        width: 60px;
+        height: 1px;
+        margin-right: 20px;
+        align-self: center;
+        background-color: $shadow-text-color;
+    }
+}

@@ -1,0 +1,33 @@
+.footer {
+    // height: 138px;
+    padding-top: 44px;
+    padding-bottom: 44px;
+    @include font (600, 11px, 1.36, 0.2em);
+}
+
+.footer__social-list {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px; 
+
+    &::before {
+        content: '';
+        width: 60px;
+        height: 1px;
+        margin-right: 40px;
+        align-self: center;
+        background-color: $main-text-color;
+    }
+
+    li a {
+        color: $main-text-color;
+    }
+
+    li:not(:last-child) {
+        margin-right: 40px;
+    }
+}
+
+.copyright {
+    color: $secondary-text-color;
+}
