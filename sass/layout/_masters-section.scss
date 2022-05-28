@@ -23,8 +23,7 @@
 }
 
 .masters__box {
-    display: flex;
-    flex-direction: column;
+    @extend %flex-column;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
@@ -44,15 +43,11 @@
 }
 
 .masters__social-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-centered;
 }
 
 .masters__social-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-centered;
 
     &:not(:last-child) {
         margin-right: 10px;

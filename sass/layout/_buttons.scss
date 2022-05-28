@@ -31,9 +31,7 @@
     position: absolute;
     top: 15px;
     right: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-centered;
     width: 35px;
     height: 35px;
     outline: none;

@@ -1,6 +1,5 @@
 .mobile-menu {
-    display: flex;
-    flex-direction: column;
+    @extend %flex-column;
     position: fixed;
     top: 0;
     right: 0;
@@ -72,6 +71,9 @@
 
 .menu-number {
     margin-bottom: 24px;
+    @media screen and (max-width:479px) {
+        font-size: 4vw;
+    }
     @include font (600, 18px, 1.39, 0.1em);
     color: $main-text-color;
 }
