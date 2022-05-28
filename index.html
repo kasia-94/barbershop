@@ -19,32 +19,38 @@
                 <use href="./images/icons.svg#icon-logo"></use>
             </svg>
         </a>
-        <button class="menu-button">
+    <!-------MOBILE MENU------->
+        <button class="menu-button js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
             <svg class="menu-button__icon">
                 <use href="./images/icons.svg#icon-menu"></use>
             </svg>
         </button>
-        <div class="mobile-menu">
+        <div class="mobile-menu js-menu-container" id="mobile-menu">
+            <button class="menu-button menu-button--close js-close-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="menu-button__icon icon-close">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
             <nav>
-                <ul class="list">
-                    <li><a  class="link" href="#about">О нас</a></li>
-                    <li><a  class="link" href="#price">Услуги и цены</a></li>
-                    <li><a  class="link" href="#masters">Мастера</a></li>
-                    <li><a  class="link" href="#contacts">Контакты</a></li>
+                <ul class="mobile-menu-list list">
+                    <li class="mobile-menu-item"><a  class="link" href="#about">О нас</a></li>
+                    <li class="mobile-menu-item"><a  class="link" href="#price">Услуги и цены</a></li>
+                    <li class="mobile-menu-item"><a  class="link" href="#masters">Мастера</a></li>
+                    <li class="mobile-menu-item"><a  class="link" href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
-            <a class="link" href="tel:+380441111111">+38 044 111 11 11</a>
-            <button type="button">онлайн-запись</button>  
-            <ul class="list">
-                <li><a class="link" href="https://www.instagram.com" target="_blank" rel="noreferrer noopener">Instagram</a></li>
-                <li><a class="link" href="https://www.youtube.com" target="_blank" rel="noreferrer noopener">Youtube</a></li>
+            <a class="menu-number link" href="tel:+380441111111">+38 044 111 11 11</a>
+            <button type="button" class="menu__button button">онлайн-запись</button>  
+            <ul class="menu__social list">
+                <li class="menu__social-link"><a class="link" href="https://www.instagram.com" target="_blank" rel="noreferrer noopener">Instagram</a></li>
+                <li class="menu__social-link"><a class="link" href="https://www.youtube.com" target="_blank" rel="noreferrer noopener">Youtube</a></li>
             </ul>       
         </div>
     </div>
     </header>
 
     <main>
-        <!-------HERO--------->
+    <!-------HERO--------->
     <section class="hero">
         <div class="container">
             <div class="hero__socail-link">
@@ -62,7 +68,7 @@
         </div>
     </section>
 
-        <!--------ABOUT--------->
+    <!--------ABOUT--------->
     <section class="about section">
         <div class="container">
                 <p class="about__title-first">О НАС</p>
@@ -87,11 +93,11 @@
                         </li>
                     </ul>
                 </div>
-                <button type="button" class="button">онлайн-запись</button>
+                <button type="button" class="button" data-modal-open>онлайн-запись</button>
             </div>
     </section>
 
-<!------PRICE-------->  
+    <!------PRICE-------->  
     <section class="price section">      
         <div class="container">
             <p class="price__pre-title">Проведи время в компании лучших мастеров</p>
@@ -135,7 +141,7 @@
                 </ul>
             </div>
 
-            <button type="button" class="button white__button">онлайн-запись</button>
+            <button type="button" class="button white__button" data-modal-open>онлайн-запись</button>
         </div>
     </section>
 
@@ -146,35 +152,27 @@
             <h2 class="main-title features__title">Почему приходят именно к нам?</h2>
             <p class="features__text">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.</p>
             <ul class="list features__list">
-                <div class="features__box">                
-                    <li>
+                    <li class="features__item">
                     <span>600<sup>+</sup></span>
                     <p>Довольных клиентов в день</p>
                     </li>
-                </div>
-                <div class="features__box">                
-                    <li>
+                    <li class="features__item">
                     <span>50<sup>+</sup></span>
                     <p>Наград за отличный сервис </p>
                     </li>
-                </div>
-                <div class="features__box">
-                    <li>
+                    <li class="features__item">
                         <span>20<sup>+</sup></span>
                         <p>Лучших мастеров Киева </p>
                     </li>
-                    </div>
-                <div class="features__box">
-                    <li>
+                    <li class="features__item">
                         <span>100<sup>+</sup></span>
                         <p>Подарков постоянным клиентам</p>
                     </li>
-                </div>
             </ul>
         </div>
         </section>
 
-        <!-------MASTERS-------->
+    <!-------MASTERS-------->
         <section class="section">
             <div class="container">
                 <p class="masters__pre-title">для настоящих ценителей атмосферы</p>
@@ -286,7 +284,7 @@
             </div>
         </section>
 
- <!------GALLERY------->       
+    <!------GALLERY------->       
         <section class="section">
             <div class="container">
                 <h2 class="visually-hidden">Галерея</h2>
@@ -327,21 +325,21 @@
                 </ul>
             </div>
         </section>
- <!-------CONTACTS------>
+    <!-------CONTACTS------>
  <section class="online-record">
         <div class="container">      
                     <h2 class="main-title white-title online-title">Онлайн-запись</h2>
                     <form class="online-form">
                         <div class="form-field">
-                            <input type="text" name="username" id="name" class="form-input" required>
+                            <input type="text" name="username" id="name" class="form-input" placeholder=" " required>
                             <label for="name" class="form-label">Имя*</label>
                         </div>
                         <div class="form-field">
-                            <input type="tel" name="tel" id="tel" class="form-input" required>
+                            <input type="tel" name="tel" id="tel" class="form-input" placeholder=" " required>
                             <label for="tel" class="form-label">Телефон*</label>
                         </div>
                         <div class="form-field">
-                            <textarea name="feedback" rows="10" id="message" class="form-input"></textarea>
+                            <textarea name="feedback" rows="10" id="message" class="form-input" placeholder=" "></textarea>
                             <label for="message" class="form-label">сообщение</label>
                         </div>
                         <button type="submit" class="white__button button">отправить</button>
@@ -377,7 +375,7 @@
                     </div>
         </section>
     </main>
-<!-------FOOTER-------> 
+    <!-------FOOTER-------> 
     <footer class="footer">
         <div class="container">
             <div class="footer__social">
@@ -391,5 +389,42 @@
             </div>
         </div>
     </footer>
+
+    <!-------MODAL WINDOW------>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <div class="modal-box">
+                <button class="button-modal" type="button" data-modal-close>
+                    <svg class="button-modal-icon">
+                      <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                  </button>
+                <h2 class="modal-title main-title">Онлайн-запись</h2>
+                <form class="online-form modal-form">
+                    <div class="form-field">
+                        <input type="text" name="username" id="name" class="modal-form-input" placeholder=" " required>
+                        <label for="name" class="form-label">Имя*</label>
+                    </div>
+                    <div class="form-field">
+                        <input type="tel" name="tel" id="tel" class="modal-form-input" placeholder=" " required>
+                        <label for="tel" class="form-label">Телефон*</label>
+                    </div>
+                    <div class="form-field">
+                        <textarea name="feedback" rows="10" id="message" class="modal-form-input" placeholder=" "></textarea>
+                        <label for="message" class="form-label">сообщение</label>
+                    </div>
+                    <button type="submit" class="button">отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
+    <script defer src="js/modal.js"></script>
 </body>
 </html>

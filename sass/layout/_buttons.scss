@@ -7,6 +7,7 @@
     background-color: transparent;
     border: 1px solid $accent-color;
     border-radius: 25px;
+    outline: none;
     cursor: pointer;
     transition: color 250ms ease-in-out, 
     background-color 250ms ease-in-out;
@@ -19,4 +20,37 @@
 
 .white__button {
     color: $white-color;
+}
+
+.menu__button {
+    width: 194px;
+    margin-bottom: 64px;
+}
+
+.button-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    outline: none;
+  
+    cursor: pointer;
+    background: $white-color;
+    border: 1px solid $accent-color;
+    border-radius: 50%;    
+}
+
+.button-modal-icon {
+    width: 25px;
+    height: 25px;
+    transition: fill 250ms ease-in-out;
+
+    .button-modal:focus &,
+    .button-modal:hover & {
+      fill: $accent-color;
+  }
 }

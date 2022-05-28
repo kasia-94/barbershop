@@ -52,9 +52,10 @@
     border-bottom: 1px solid $shadow-text-color; 
     cursor: pointer;
     color: $white-color;
+    outline: none;
 }
 
-.form-input:focus + label, .form-input:hover + label {
+.form-input:focus + label, .form-input:hover + label, .form-input:not(:placeholder-shown) + label {
     color: $white-color;
     transform: translateY(-100%);
 }

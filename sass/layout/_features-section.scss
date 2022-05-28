@@ -27,15 +27,18 @@
 .features__list {
     display: flex;
     flex-wrap: wrap;
-    margin: -15px;
     padding: 0;
 }
 
-.features__box {
-    width: calc((100% - 2 * 15) / 2);
-    margin: 15px;
-    padding: 20px;
-    text-align: center;
+.features__item {
+    width: 193px;
+    height: 133px;
+    padding: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     background-color: $secondary-based-color;
 
     span {
@@ -43,16 +46,36 @@
         text-align: center;
     
         sup {
-            margin-bottom: 6px;
+            margin-left: 2px;
             @include font (600, 16px, 1.38, null);
             color: $accent-color;
         }
     }
     p {
         @include font (600, 11px, 1.36, null);
+            padding-left: 10px;
+            padding-right: 10px;
+            text-align: center;
     }
-} 
 
-// .features__box:nth-child(2n+1) {
-//     margin-right: 15px;
-//   }
+@media screen and (max-width:479px) {
+    width: calc((100% - 2 * 15px) / 2);
+}
+}
+
+.features__item:nth-child(2n+1) {
+    margin-right: 30px;
+  }
+
+.features__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+.features__item:nth-child(2n) {
+    margin-top: 30px;
+  }
+
+  .features__item:nth-child(2n) {
+    margin-bottom: 0;
+  }
+  

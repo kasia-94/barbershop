@@ -65,10 +65,9 @@
     border-radius: 50%;
     background-color: $white-color;
     color: $main-text-color;
-    transition: color 250ms ease-in-out, box-shadow 250ms ease-in-out;
+    transition: color 250ms ease-in-out;
     
     &:hover, &:focus {
-        box-shadow: inset 0 0 6px 1px $shadow-text-color;
         color: $accent-color;
     }
 }
