@@ -1,10 +1,8 @@
 .price {
-    padding-top: 84px;
-    padding-bottom: 84px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-color: #111319;
+    background-color: $contact-background;
 
     @media screen and (max-width: 767px) {
         background-image: url(../images/price-480.png);
@@ -33,6 +31,9 @@
                 align-items: center;
             }
 }
+.general-price {
+    width: 100%;
+}
 
 .price__pre-title {
     display: flex;
@@ -40,6 +41,10 @@
     @include font (600, 11px, 1.36, 0.1em);
     text-transform: uppercase;   
     color: $shadow-text-color;
+
+    @media screen and (min-width:768px) {
+        text-align: start;
+    }
 
     &::before {
         content: '';
@@ -57,11 +62,39 @@
 }
 
 .price__list {
-    flex-grow: 1;
     margin-bottom: 50px;
-    padding: 30px;
     color: $secondary-text-color;
     background: linear-gradient(180deg, #171A24 0%, rgba(23, 26, 36, 0.2) 100%);
+
+    @media screen and (max-width:767px) {
+        ul:not(:last-child) {
+            margin-bottom: 0;
+        }
+    }
+    @media screen and (min-width:768px) {
+        padding: 0;
+    }
+    @media screen and (max-width: 1199px) {
+        ul {
+            padding: 30px 40px;
+            &:not(:last-child) {
+                padding-bottom: 0;
+            }
+            &:last-child {
+                padding-top: 20px;
+            }
+        }
+    }
+    @media screen and (min-width:1200px) {
+        display: flex;
+        ul {
+            padding: 30px 20px;
+            flex-grow: 1;
+        }
+        .dark {
+            background: linear-gradient(180deg, #090B13 0%, rgba(9, 11, 19, 0.2) 100%);
+        }
+    }
 }
 
 .price__item {
@@ -69,6 +102,10 @@
     @include font (null, 14px, 2.14, 0.02em);
     justify-content: space-between;
     align-items: baseline;
+
+    @media screen and (min-width:768px) {
+        @include font (null, 18px, 1.67, 0.02em);
+    }
 
     &:not(:last-child) {
         margin-bottom: 20px;

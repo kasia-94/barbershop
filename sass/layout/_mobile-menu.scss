@@ -32,16 +32,19 @@
     background-color: transparent;
     border: none;
     outline: none;
-
     @media screen and (min-width:768px) {
         display: none;
     }
-}
 
-.menu-button--close {
-    position: absolute;
-    top: 48px;
-    right: 31px;
+    &--open {
+        margin-right: 31px;
+    }
+
+    &--close {
+        position: absolute;
+        top: 48px;
+        right: 31px;
+    }
 }
 
 .menu-button__icon {
@@ -59,6 +62,7 @@
     @include font (600, 18px, 1.39, 0.1em);   
 
     li a {
+        transition: color 250ms ease-in-out;
         &:hover, &:focus {
             color: $accent-color;
         }
@@ -76,9 +80,17 @@
     }
     @include font (600, 18px, 1.39, 0.1em);
     color: $main-text-color;
+    transition: color 250ms ease-in-out;
+    &:hover, &:focus {
+        color: $accent-color;
+    }
 }
 
 .menu__social-link {
     margin-bottom: 24px;
     @include font (600, 14px, 1.36, 0.2em);
+
+    & a:hover, & a:focus {
+        color: $accent-color;
+    }
 }

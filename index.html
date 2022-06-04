@@ -14,29 +14,31 @@
     <!------HEADER------->
     <header class="header">
         <div class="container">
-        <a class="link" href="./index.html">
-            <svg class="logo" width="66" height="55">
-                <use href="./images/icons.svg#icon-logo"></use>
-            </svg>
-        </a>
+                <a class="logo-link link" href="./index.html">
+                    <svg class="logo" width="66" height="55">
+                        <use href="./images/icons.svg#icon-logo"></use>
+                    </svg>
+                </a>
         <div class="main-header">
             <nav>
-                <ul class="mobile-menu-list list">
-                    <li class="mobile-menu-item"><a  class="link" href="#about">О нас</a></li>
-                    <li class="mobile-menu-item"><a  class="link" href="#price">Услуги и цены</a></li>
-                    <li class="mobile-menu-item"><a  class="link" href="#masters">Мастера</a></li>
-                    <li class="mobile-menu-item"><a  class="link" href="#contacts">Контакты</a></li>
+                <ul class="main-menu list">
+                    <li class="main-menu__item"><a  class="link" href="#about">О нас</a></li>
+                    <li class="main-menu__item"><a  class="link" href="#price">Услуги и цены</a></li>
+                    <li class="main-menu__item"><a  class="link" href="#masters">Мастера</a></li>
+                    <li class="main-menu__item"><a  class="link" href="#contacts">Контакты</a></li>
                 </ul>
             </nav>
-            <a class="menu-number link" href="tel:+380441111111">+38 044 111 11 11</a>
-            <button type="button" class="menu__button button">онлайн-запись</button>
+            <div class="main-contact">
+                <a class="main-contact__link link" href="tel:+380441111111">+38 044 111 11 11</a>
+                <button type="button" class="white__button button">онлайн-запись</button>
+            </div>
         </div>
     <!-------MOBILE MENU------->
-        <button class="menu-button js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-            <svg class="menu-button__icon">
-                <use href="./images/icons.svg#icon-menu"></use>
-            </svg>
-        </button>
+    <button class="menu-button menu-button--open js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="menu-button__icon">
+            <use href="./images/icons.svg#icon-menu"></use>
+        </svg>
+    </button>
         <div class="mobile-menu js-menu-container" id="mobile-menu">
             <button class="menu-button menu-button--close js-close-menu" aria-expanded="false" aria-controls="mobile-menu">
                 <svg class="menu-button__icon icon-close">
@@ -65,55 +67,60 @@
     <!-------HERO--------->
     <section class="hero">
         <div class="container">
-            <div class="hero__socail-link">
-                <ul class="list">
-                    <li><a class="link" href="https://www.instagram.com" target="_blank" rel="noreferrer noopener">Instagram</a></li>
-                    <li><a class="link" href="https://www.youtube.com" target="_blank" rel="noreferrer noopener">Youtube</a></li>
+            <div class="hero__social">
+                <ul class="hero__social-list list">
+                    <li class="hero__social-item"><a class="link" href="https://www.instagram.com" target="_blank" rel="noreferrer noopener">Instagram</a></li>
+                    <li class="hero__social-item"><a class="link" href="https://www.youtube.com" target="_blank" rel="noreferrer noopener">Youtube</a></li>
                 </ul>
             </div>
-
+            <div class="hero-content">
                 <p lang="en" class="hero__pre-title">A hair salon for men in Kyiv</p>
                 <h1 class="hero__title">BarberShop</h1>
                 <p class="hero__text">Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.</p>
                 <!-- <button type="button">Назад</button>
                 <button type="button">Вперед</button> -->
+            </div>
         </div>
     </section>
 
     <!--------ABOUT--------->
     <section class="about section">
         <div class="container">
+            <div class="about__picture-list">
+                <ul class="list">
+                    <li>
+                        <picture>
+                            <source srcset="./images/about-1-270.jpg 1x, ./images/about-1-270@2x.jpg 2x" media="(min-width: 1200px)"/>
+                            <source srcset="./images/about-1-330.jpg 1x, ./images/about-1-330@2x.jpg 2x" media="(min-width: 768px)"/>
+                            <img src="./images/about-1-270.jpg" alt="Beard"/>
+                          </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source srcset="./images/about-2-270.jpg 1x, ./images/about-2-270@2x.jpg 2x" media="(min-width: 1200px)"/>
+                            <source srcset="./images/about-2-330.jpg 1x, ./images/about-2-330@2x.jpg 2x" media="(min-width: 768px)"/>
+                            <img src="./images/about-2-270.jpg" alt="Beard"/>
+                          </picture>
+                    </li>
+                </ul>
+            </div>
+            <div class="about_article">
                 <p class="about__title-first">О НАС</p>
                 <h2 id="about" class="about__main-title">Лучший Барбершоп твоего города</h2>
                 <p class="about__main-text">Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.</p>
-                <p class="about__text">Мы команда, которая никогда не останавливается на достигнутом жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда готовы усовершенствовать каждого, кто к нам приходит!</p>
-                <div class="about__picture-list">
-                    <ul class="list">
-                        <li>
-                            <picture>
-                                <source srcset="./images/about-1-330.jpg 1x, ./images/about-1-330@2x.jpg 2x" media="(min-width: 768px)"/>
-                                <source srcset="./images/about-1-270.jpg 1x, ./images/about-1-270@2x.jpg 2x" media="(min-width: 1200px)"/>
-                                <img src="./images/about-1-270.jpg" alt="Beard"/>
-                              </picture>
-                        </li>
-                        <li>
-                            <picture>
-                                <source srcset="./images/about-2-330.jpg 1x, ./images/about-2-330@2x.jpg 2x" media="(min-width: 768px)"/>
-                                <source srcset="./images/about-2-270.jpg 1x, ./images/about-2-270@2x.jpg 2x" media="(min-width: 1200px)"/>
-                                <img src="./images/about-2-270.jpg" alt="Beard"/>
-                              </picture>
-                        </li>
-                    </ul>
-                </div>
+                <p class="about__text">Мы команда, которая никогда не останавливается на достигнутом жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда готовы усовершенствовать каждого, кто к нам приходит!</p>    
                 <button type="button" class="button" data-modal-open>онлайн-запись</button>
+            </div>
             </div>
     </section>
 
     <!------PRICE-------->  
     <section class="price section">      
         <div class="container">
-            <p class="price__pre-title">Проведи время в компании лучших мастеров</p>
-            <h2 id="price" class="price__title main-title">Услуги и цены</h2>
+            <div class="general-price">
+                <p class="price__pre-title">Проведи время в компании лучших мастеров</p>
+                <h2 id="price" class="price__title main-title">Услуги и цены</h2>
+
             <div class="price__list">
                 <ul class="list">
                     <li class="price__item">
@@ -133,7 +140,7 @@
                         <p class="prices-item-text">от 200 грн.</p>
                     </li>
                 </ul>
-                <ul class="list">
+                <ul class="list dark">
                     <li class="price__item">
                         <p class="prices-item-text">Cтрижка у стажера</p>
                         <p class="prices-item-text">от 50 грн.</p>
@@ -152,18 +159,21 @@
                     </li>
                 </ul>
             </div>
-
+        </div>
             <button type="button" class="button white__button" data-modal-open>онлайн-запись</button>
         </div>
     </section>
 
     <!--------FEATURES------->
-    <section class="section">
+    <section class="features section">
         <div class="container">
-            <p class="features__pre-title">старая традиционная школа</p>
-            <h2 class="main-title features__title">Почему приходят именно к нам?</h2>
-            <p class="features__text">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.</p>
-            <ul class="list features__list">
+            <div class="features-first">
+                <p class="features__pre-title">старая традиционная школа</p>
+                <h2 class="main-title features__title">Почему приходят именно к нам?</h2>
+                <p class="features__text">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.</p>
+            </div>
+            <div class="features-second">
+                <ul class="list features__list">
                     <li class="features__item">
                     <span>600<sup>+</sup></span>
                     <p>Довольных клиентов в день</p>
@@ -181,20 +191,21 @@
                         <p>Подарков постоянным клиентам</p>
                     </li>
             </ul>
+            </div>
         </div>
         </section>
 
     <!-------MASTERS-------->
-        <section class="section">
+        <section class="masters section">
             <div class="container">
-                <p class="masters__pre-title">для настоящих ценителей атмосферы</p>
-                <h2 id="masters" class="masters__title main-title">Наши мастера</h2>
-                <ul class="list">
-                    <li class="masters__list">
+                    <p class="masters__pre-title">для настоящих ценителей атмосферы</p>
+                    <h2 id="masters" class="masters__title main-title">Наши мастера</h2>
+                <ul class="masters__list list">
+                    <li class="masters__li">
                         <picture>
-                            <source srcset="./images/masters/john-smith-418.jpg 1x, ./images/masters/john-smith-418@2x.jpg 2x" media="(max-width: 767px)"/>
-                            <source srcset="./images/masters/john-smith-450.jpg 1x, ./images/masters/john-smith-450@2x.jpg 2x" media="(min-width: 768px)"/>
                             <source srcset="./images/masters/john-smith-370.jpg 1x, ./images/masters/john-smith-370@2x.jpg 2x" media="(min-width: 1200px)"/>
+                            <source srcset="./images/masters/john-smith-450.jpg 1x, ./images/masters/john-smith-450@2x.jpg 2x" media="(min-width: 768px)"/>
+                            <source srcset="./images/masters/john-smith-418.jpg 1x, ./images/masters/john-smith-418@2x.jpg 2x" media="(max-width: 767px)"/>
                             <img src="./images/masters/john-smith-370.jpg" alt="John-Smith"/>
                           </picture>
                           <div class="masters__box">
@@ -224,11 +235,11 @@
                             </ul> 
                           </div>
                     </li>
-                    <li class="masters__list">
+                    <li class="masters__li">
                         <picture>
-                            <source srcset="./images/masters/michele-doe-418.jpg 1x, ./images/masters/michele-doe-418@2x.jpg 2x" media="(max-width: 767px)"/>
-                            <source srcset="./images/masters/michele-doe-450.jpg 1x, ./images/masters/michele-doe-450@2x.jpg 2x" media="(min-width: 768px)"/>
                             <source srcset="./images/masters/michele-doe-370.jpg 1x, ./images/masters/michele-doe-370@2x.jpg 2x" media="(min-width: 1200px)"/>
+                            <source srcset="./images/masters/michele-doe-450.jpg 1x, ./images/masters/michele-doe-450@2x.jpg 2x" media="(min-width: 768px)"/>
+                            <source srcset="./images/masters/michele-doe-418.jpg 1x, ./images/masters/michele-doe-418@2x.jpg 2x" media="(max-width: 767px)"/>
                             <img src="./images/masters/michele-doe-370.jpg" alt="Michele-Doe"/>
                           </picture>
                           <div class="masters__box">
@@ -258,11 +269,11 @@
                             </ul> 
                           </div>
                     </li>
-                    <li class="masters__list">
+                    <li class="masters__li">
                         <picture>
-                            <source srcset="./images/masters/alan-black-418.jpg 1x, ./images/masters/alan-black-418@2x.jpg 2x" media="(max-width: 767px)"/>
-                            <source srcset="./images/masters/alan-black-450.jpg 1x, ./images/masters/alan-black-450@2x.jpg 2x" media="(min-width: 768px)"/>
                             <source srcset="./images/masters/alan-black-370.jpg 1x, ./images/masters/alan-black-370@2x.jpg 2x" media="(min-width: 1200px)"/>
+                            <source srcset="./images/masters/alan-black-450.jpg 1x, ./images/masters/alan-black-450@2x.jpg 2x" media="(min-width: 768px)"/>
+                            <source srcset="./images/masters/alan-black-418.jpg 1x, ./images/masters/alan-black-418@2x.jpg 2x" media="(max-width: 767px)"/>
                             <img src="./images/masters/alan-black-370.jpg" alt="ALan-Black"/>
                           </picture>
                           <div class="masters__box">
@@ -297,40 +308,40 @@
         </section>
 
     <!------GALLERY------->       
-        <section class="section">
+        <section class="gallery section">
             <div class="container">
                 <h2 class="visually-hidden">Галерея</h2>
                 <p class="gallery__pre-title">На латинском языке “барба” означает “борода”</p>
-                <ul class="list">
+                <ul class="gallery-list list">
                     <li class="gallery__item">
                         <picture>
-                            <source srcset="./images/gallery/gallery-1-418.jpg 1x, ./images/gallery/gallery-1-418@2x.jpg 2x" media="(max-width: 767px)"/>
-                            <source srcset="./images/gallery/gallery-1-330.jpg 1x, ./images/gallery/gallery-1-330@2x.jpg 2x" media="(min-width: 768px)"/>
                             <source srcset="./images/gallery/gallery-1-270.jpg 1x, ./images/gallery/gallery-1-270@2x.jpg 2x" media="(min-width: 1200px)"/>
+                            <source srcset="./images/gallery/gallery-1-330.jpg 1x, ./images/gallery/gallery-1-330@2x.jpg 2x" media="(min-width: 768px)"/>
+                            <source srcset="./images/gallery/gallery-1-418.jpg 1x, ./images/gallery/gallery-1-418@2x.jpg 2x" media="(max-width: 767px)"/>
                             <img src="./images/gallery/gallery-1-270.jpg" alt="Haircutting"/>
                           </picture>
                     </li>
                     <li class="gallery__item">
                         <picture>
-                            <source srcset="./images/gallery/gallery-2-418.jpg 1x, ./images/gallery/gallery-2-418@2x.jpg 2x" media="(max-width: 767px)"/>
-                            <source srcset="./images/gallery/gallery-2-330.jpg 1x, ./images/gallery/gallery-2-330@2x.jpg 2x" media="(min-width: 768px)"/>
                             <source srcset="./images/gallery/gallery-2-270.jpg 1x, ./images/gallery/gallery-2-270@2x.jpg 2x" media="(min-width: 1200px)"/>
+                            <source srcset="./images/gallery/gallery-2-330.jpg 1x, ./images/gallery/gallery-2-330@2x.jpg 2x" media="(min-width: 768px)"/>
+                            <source srcset="./images/gallery/gallery-2-418.jpg 1x, ./images/gallery/gallery-2-418@2x.jpg 2x" media="(max-width: 767px)"/>
                             <img src="./images/gallery/gallery-2-270.jpg" alt="Haircutting"/>
                           </picture>
                     </li>
                     <li class="gallery__item">
                         <picture>
-                            <source srcset="./images/gallery/gallery-3-418.jpg 1x, ./images/gallery/gallery-3-418@2x.jpg 2x" media="(max-width: 767px)"/>
-                            <source srcset="./images/gallery/gallery-3-330.jpg 1x, ./images/gallery/gallery-3-330@2x.jpg 2x" media="(min-width: 768px)"/>
                             <source srcset="./images/gallery/gallery-3-270.jpg 1x, ./images/gallery/gallery-3-270@2x.jpg 2x" media="(min-width: 1200px)"/>
+                            <source srcset="./images/gallery/gallery-3-330.jpg 1x, ./images/gallery/gallery-3-330@2x.jpg 2x" media="(min-width: 768px)"/>
+                            <source srcset="./images/gallery/gallery-3-418.jpg 1x, ./images/gallery/gallery-3-418@2x.jpg 2x" media="(max-width: 767px)"/>
                             <img src="./images/gallery/gallery-3-270.jpg" alt="Haircutting"/>
                           </picture>
                     </li>
                     <li class="gallery__item">
                         <picture>
-                            <source srcset="./images/gallery/gallery-4-418.jpg 1x, ./images/gallery/gallery-4-418@2x.jpg 2x" media="(max-width: 767px)"/>
-                            <source srcset="./images/gallery/gallery-4-330.jpg 1x, ./images/gallery/gallery-4-330@2x.jpg 2x" media="(min-width: 768px)"/>
                             <source srcset="./images/gallery/gallery-4-270.jpg 1x, ./images/gallery/gallery-4-270@2x.jpg 2x" media="(min-width: 1200px)"/>
+                            <source srcset="./images/gallery/gallery-4-330.jpg 1x, ./images/gallery/gallery-4-330@2x.jpg 2x" media="(min-width: 768px)"/>
+                            <source srcset="./images/gallery/gallery-4-418.jpg 1x, ./images/gallery/gallery-4-418@2x.jpg 2x" media="(max-width: 767px)"/>
                             <img src="./images/gallery/gallery-4-270.jpg" alt="Haircutting"/>
                           </picture>
                     </li>
@@ -338,57 +349,65 @@
             </div>
         </section>
     <!-------CONTACTS------>
- <section class="online-record">
-        <div class="container">      
-                    <h2 class="main-title white-title online-title">Онлайн-запись</h2>
-                    <form class="online-form">
-                        <div class="form-field">
-                            <input type="text" name="username" id="name" class="form-input" placeholder=" " required>
-                            <label for="name" class="form-label">Имя*</label>
-                        </div>
-                        <div class="form-field">
-                            <input type="tel" name="tel" id="tel" class="form-input" placeholder=" " required>
-                            <label for="tel" class="form-label">Телефон*</label>
-                        </div>
-                        <div class="form-field">
-                            <textarea name="feedback" rows="10" id="message" class="form-input" placeholder=" "></textarea>
-                            <label for="message" class="form-label">сообщение</label>
-                        </div>
+    <div class="contact-wrap">
+        <section class="online-record section">
+            <div class="container">      
+                        <h2 class="main-title white-title online-title">Онлайн-запись</h2>
+                        <form class="online-form">
+                            <div class="online-input">
+                                <div class="form-field">
+                                    <input type="text" name="username" id="name" class="form-input" placeholder=" " required>
+                                    <label for="name" class="form-label">Имя*</label>
+                                </div>
+                                <div class="form-field">
+                                    <input type="tel" name="tel" id="tel" class="form-input" placeholder=" " required>
+                                    <label for="tel" class="form-label">Телефон*</label>
+                                </div>
+                            </div>
+
+                            <div class="form-field">
+                                <textarea name="feedback" rows="10" id="message" class="form-input" placeholder=" "></textarea>
+                                <label for="message" class="form-label">сообщение</label>
+                            </div>
+                        </form>
                         <button type="submit" class="white__button button">отправить</button>
-                    </form>
-                </div>
-        </section>
-        <section class="contact">
-                    <div class="container">
-                        <h2 class="contact-title main-title white-title contact-title">Контакты</h2>
-                        <div class="contact-box">
-                            <address class="address">
-                                <ul class="contact-list list">
-                                    <li class="contact-item">
-                                        <svg class="contact-icon">
-                                            <use href="./images/icons.svg#icon-map-pin"></use>
-                                        </svg>
-                                        <a class="contact-link link" href="https://goo.gl/maps/cfMxSL94p8BhDi5P8" target="_blank" rel="noreferrer noopener nofollower">ул. Васильковая, 7А Киев, 08132</a></li>
-                                    <li class="contact-item">
-                                        <svg class="contact-icon">
-                                            <use href="./images/icons.svg#icon-phone"></use>
-                                        </svg>
-                                        <a class="contact-link link" href="tel:+380441111111">+38 044 111 11 11</a></li>
-                                    <li class="contact-item">
-                                        <svg class="contact-icon">
-                                            <use href="./images/icons.svg#icon-mail"></use>
-                                        </svg>
-                                        <a class="contact-link link" href="mailto:barbershop@email.com">barbershop@email.com</a></li>
-                                </ul>
-                            </address>
-                            <p class="time-title">время работы</p>
-                            <p class="time-text">Ежедневно с 9:00 до 22:00</p>
-                        </div>
                     </div>
-        </section>
+            </section>
+            <section class="contact section">
+                        <div class="container">
+                            <h2 class="contact-title main-title white-title contact-title">Контакты</h2>
+                            <div class="contact-box">
+                                <address class="address">
+                                    <ul class="contact-list list">
+                                        <li class="contact-item">
+                                            <svg class="contact-icon">
+                                                <use href="./images/icons.svg#icon-map-pin"></use>
+                                            </svg>
+                                            <a class="contact-link link" href="https://goo.gl/maps/cfMxSL94p8BhDi5P8" target="_blank" rel="noreferrer noopener nofollower">ул. Васильковая, 7А Киев, 08132</a></li>
+                                        <li class="contact-item">
+                                            <svg class="contact-icon">
+                                                <use href="./images/icons.svg#icon-phone"></use>
+                                            </svg>
+                                            <a class="contact-link link" href="tel:+380441111111">+38 044 111 11 11</a></li>
+                                        <li class="contact-item">
+                                            <svg class="contact-icon">
+                                                <use href="./images/icons.svg#icon-mail"></use>
+                                            </svg>
+                                            <a class="contact-link link" href="mailto:barbershop@email.com">barbershop@email.com</a></li>
+                                    </ul>
+                                </address>
+                                <div class="contact-time">
+                                    <p class="time-title">время работы</p>
+                                    <p class="time-text">Ежедневно с 9:00 до 22:00</p>
+                                </div>
+    
+                            </div>
+                        </div>
+            </section>
+    </div>
     </main>
     <!-------FOOTER-------> 
-    <footer class="footer">
+    <footer class="footer section">
         <div class="container">
             <div class="footer__social">
                 <ul class="footer__social-list list">

@@ -21,32 +21,22 @@
   }
 
 .modal {
-    width: 400px;
-    height: auto;
-    background-color: $white-color;
-
     position: absolute;
     top: 50%;
     left: 50%;
+    height: auto;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms ease-in-out;
+    background-color: $white-color;
 
     @media screen and (max-width:479px) {
         width: calc(100% - 10px);
         padding: 8px;
       }
-    //   @media screen and (min-width:480px) {
-    //     min-width: 450px; 
-    //     min-height: 609px;
-    //     padding: 8px; 
-    //   }
-  
-    //   @media screen and (min-width:1200px) {
-    //     min-width: 528px;
-    //     min-height: 581px; 
-    //   }
-
-    //   background-color: $white-color;
+      @media screen and (min-width:480px) {
+        min-width: 450px; 
+        min-height: auto;
+      }
 }
 
 .modal-box {

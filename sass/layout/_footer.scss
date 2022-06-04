@@ -3,6 +3,14 @@
     padding-top: 44px;
     padding-bottom: 44px;
     @include font (600, 11px, 1.36, 0.2em);
+
+    .container {
+        @media screen and (min-width:768px) {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+    }
 }
 
 .footer__social-list {

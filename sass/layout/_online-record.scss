@@ -1,12 +1,18 @@
 .online-record {
-    padding-top: 84px;
-    padding-bottom: 84px;
+    flex-grow: 1;
     background-color: $contact-background;
 
+    @media screen and (min-width:1200px) {
+        padding-left: 100px;
+    }
     .container {
         @extend %flex-column;
         justify-content: center;
         align-items: center;
+
+        @media screen and (min-width:768px) {
+            align-items: start;
+        }
     }
 }
 
@@ -26,17 +32,35 @@
     text-transform: uppercase;
 }
 
+.online-input {
+    width: 100%;
+    @media screen and (min-width:768px) {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+}
+
 .form-field {
     @extend %flex-column;
     position: relative;
     width: 100%;
     margin-bottom: 44px;
 
+    @media screen and (min-width:768px) {
+        margin-bottom: 33px;
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
     input {
         height: 23px;
+
     }
     textarea {
         height: 75px;
+        display: flex;
     }
 }
 
