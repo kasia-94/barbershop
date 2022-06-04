@@ -86,19 +86,10 @@
     }
 }
 
-.hero__pre-title {
-    display: flex;
-    margin-bottom: 20px;
-    @include font (600, 11px, 1.36, 0.1em);
-    text-transform: uppercase;   
+.hero__pre-title {  
     color: $shadow-text-color;
 
     &::before {
-        content: '';
-        width: 60px;
-        height: 1px;
-        margin-right: 20px;
-        align-self: center;
         background-color: $shadow-text-color;
     }
 }

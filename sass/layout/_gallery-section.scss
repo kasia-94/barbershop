@@ -2,22 +2,6 @@
     background-color: $white-color ;
 }
 
-.gallery__pre-title {
-    display: flex;
-    margin-bottom: 44px;
-    @include font (600, 11px, 1.91, 0.1em);
-    text-transform: uppercase;
-
-    &::before {
-        content: '';
-        width: 60px;
-        height: 1px;
-        margin-right: 20px;
-        align-self: center;
-        background-color: $main-text-color;
-    }
-}
-
 .gallery-list {
     @media screen and (min-width:768px) {
         display: flex;

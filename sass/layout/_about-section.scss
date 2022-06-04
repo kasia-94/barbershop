@@ -6,25 +6,6 @@
 }
 }
 
-.about__title-first {
-    display: flex;
-    @include font (600, 11px, 1.36, 0.1em);
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    @media screen and (min-width: 1200px) {
-        margin-bottom: 19px;
-    }
-
-&::before {
-    content: '';
-    width: 60px;
-    height: 1px;
-    margin-right: 20px;
-    align-self: center;
-    background-color: $main-text-color;
-}
-}
-
 .about__picture-list {
     @media screen and (max-width:767px) {
         display: none;

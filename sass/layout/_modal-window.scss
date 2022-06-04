@@ -52,6 +52,20 @@
     color: $main-text-color;
 }
 
+.modal-form-field {
+    @extend %flex-column;
+    position: relative;
+    width: 100%;
+    margin-bottom: 44px;
+
+    input {
+        height: 23px;
+    }
+    textarea {
+        height: 75px;
+    }
+}
+
 .modal-form-input {
     margin: 0;
     padding: 3px;
