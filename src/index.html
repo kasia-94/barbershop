@@ -11,9 +11,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
     <title>BarberShop</title>
   </head>
   <body>
+    <a id="button" class="button-up"></a>
     <!--HEADER-->
     <header class="header">
       <div class="container">
@@ -43,11 +48,16 @@
             <a class="main-contact__link link" href="tel:+380441111111"
               >+38 044 111 11 11</a
             >
-            <button type="button" class="white__button button">
+            <button
+              type="button"
+              class="white__button button"
+              data-menu-modal-open
+            >
               онлайн-запись
             </button>
           </div>
         </div>
+
         <!--MOBILE MENU-->
         <button
           class="menu-button menu-button--open js-open-menu"
@@ -268,7 +278,11 @@
               </ul>
             </div>
           </div>
-          <button type="button" class="button white__button" data-modal-open>
+          <button
+            type="button"
+            class="button white__button"
+            data-menu-price-open
+          >
             онлайн-запись
           </button>
         </div>
@@ -703,7 +717,7 @@
             <h2 class="main-title white-title online-title">Онлайн-запись</h2>
             <form class="online-form">
               <div class="online-input">
-                <div class="form-field">
+                <div class="form-field margin">
                   <input
                     type="text"
                     name="username"
@@ -823,7 +837,56 @@
       </div>
     </footer>
 
-    <!--MODAL WINDOW-->
+    <!--FIRST MODAL WINDOW-->
+    <div class="backdrop is-hidden" data-menu-modal>
+      <div class="modal">
+        <div class="modal-box">
+          <button class="button-modal" type="button" data-menu-modal-close>
+            <svg class="button-modal-icon">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <h2 class="modal-title main-title">Онлайн-запись</h2>
+          <form class="online-form modal-form">
+            <div class="form-field">
+              <input
+                type="text"
+                name="username"
+                id="modal-name"
+                class="modal-form-input"
+                placeholder=" "
+                required
+              />
+              <label for="modal-name" class="form-label">Имя*</label>
+            </div>
+            <div class="form-field">
+              <input
+                type="tel"
+                name="modal-tel"
+                id="modal-tel"
+                class="modal-form-input"
+                placeholder=" "
+                required
+              />
+              <label for="modal-tel" class="form-label">Телефон*</label>
+            </div>
+            <div class="form-field">
+              <textarea
+                name="feedback"
+                rows="10"
+                id="modal-message"
+                class="modal-form-input"
+                placeholder=" "
+              ></textarea>
+              <label for="modal-message" class="form-label">сообщение</label>
+            </div>
+            <button type="submit" class="button">отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--SECOND MODAL WINDOW-->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <div class="modal-box">
@@ -871,6 +934,56 @@
         </div>
       </div>
     </div>
+
+    <!--THIRD MODAL WINDOW-->
+    <div class="backdrop is-hidden" data-price-modal>
+      <div class="modal">
+        <div class="modal-box">
+          <button class="button-modal" type="button" data-price-modal-close>
+            <svg class="button-modal-icon">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <h2 class="modal-title main-title">Онлайн-запись</h2>
+          <form class="online-form modal-form">
+            <div class="form-field">
+              <input
+                type="text"
+                name="username"
+                id="modal-name"
+                class="modal-form-input"
+                placeholder=" "
+                required
+              />
+              <label for="modal-name" class="form-label">Имя*</label>
+            </div>
+            <div class="form-field">
+              <input
+                type="tel"
+                name="modal-tel"
+                id="modal-tel"
+                class="modal-form-input"
+                placeholder=" "
+                required
+              />
+              <label for="modal-tel" class="form-label">Телефон*</label>
+            </div>
+            <div class="form-field">
+              <textarea
+                name="feedback"
+                rows="10"
+                id="modal-message"
+                class="modal-form-input"
+                placeholder=" "
+              ></textarea>
+              <label for="modal-message" class="form-label">сообщение</label>
+            </div>
+            <button type="submit" class="button">отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <script
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
@@ -878,6 +991,12 @@
       crossorigin="anonymous"
     ></script>
     <script defer src="js/mobile-menu.js"></script>
-    <script defer src="js/modal.js"></script>
+    <script defer src="js/modal-1.js"></script>
+    <script defer src="js/modal-2.js"></script>
+    <script defer src="js/modal-3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/button-up.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/slider.js"></script>
   </body>
 </html>

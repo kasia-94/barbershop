@@ -1,0 +1,98 @@
+.button {
+  width: 160px;
+  height: 40px;
+  padding: 12px 0;
+  text-transform: uppercase;
+  @include font(600, 12px, 1.33, 0.09em);
+  background-color: transparent;
+  border: 1px solid $accent-color;
+  border-radius: 25px;
+  outline: none;
+  cursor: pointer;
+  transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
+
+  &:active,
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $white-color;
+  }
+}
+
+.white__button {
+  color: $white-color;
+}
+
+.menu__button {
+  width: 194px;
+  margin-bottom: 64px;
+}
+
+.button-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  @extend %flex-centered;
+  width: 35px;
+  height: 35px;
+  outline: none;
+
+  cursor: pointer;
+  background: $white-color;
+  border: 1px solid $accent-color;
+  border-radius: 50%;
+}
+
+.button-modal-icon {
+  width: 25px;
+  height: 25px;
+  transition: fill 250ms ease-in-out;
+
+  .button-modal:focus &,
+  .button-modal:hover & {
+    fill: $accent-color;
+  }
+}
+
+.button-up {
+  display: inline-block;
+  background-color: $hero-background;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+
+  @media screen and (min-width: 768px) {
+    bottom: 30px;
+    right: 30px;
+  }
+}
+.button-up:hover {
+  cursor: pointer;
+  background-color: $accent-color;
+}
+.button-up:active {
+  background-color: $accent-color;
+}
+
+.button-up::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+
+.button-up.show {
+  opacity: 1;
+  visibility: visible;
+}
